@@ -1,1 +1,56 @@
 Hello World!!
+-------------------------------------------------
+C:\Users\I11-05\DevOpsDemo>git tag v1.0 -m "first release"
+
+C:\Users\I11-05\DevOpsDemo>git tag
+v1.0
+
+C:\Users\I11-05\DevOpsDemo>git status
+On branch main
+nothing to commit, working tree clean
+
+C:\Users\I11-05\DevOpsDemo>git push origin main
+Everything up-to-date
+
+C:\Users\I11-05\DevOpsDemo>git push origin v1.0
+Enumerating objects: 1, done.
+Counting objects: 100% (1/1), done.
+Writing objects: 100% (1/1), 167 bytes | 167.00 KiB/s, done.
+Total 1 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/sneka-muralikrishnan/DevOpsDemo.git
+ * [new tag]         v1.0 -> v1.0
+
+C:\Users\I11-05\DevOpsDemo>git checkout -b pseudoBranch
+Switched to a new branch 'pseudoBranch'
+
+C:\Users\I11-05\DevOpsDemo>git branch
+  main
+* pseudoBranch
+
+C:\Users\I11-05\DevOpsDemo>git log
+commit 44f455a93ec97a31ca161daa1f134c4e2ef9534d (HEAD -> pseudoBranch, tag: v1.0, origin/main, main)
+Author: sneka-muralikrishnan <mgsneka@gmail.com>
+Date:   Tue Jan 28 08:32:56 2025 +0530
+
+    Issue - 1
+
+commit 164bb925333dd9ef8de3a4fdbe08395c0ef5f981
+Author: sneka-muralikrishnan <mgsneka@gmail.com>
+Date:   Tue Jan 28 08:21:48 2025 +0530
+
+    Issue - 4
+
+commit 91c50af66bba201dc273870de7d273edd85e88ef
+Author: sneka-muralikrishnan <mgsneka@gmail.com>
+Date:   Tue Jan 28 08:15:34 2025 +0530
+
+    Issue - 1
+
+C:\Users\I11-05\DevOpsDemo>git push origin pseudoBranch
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+remote:
+remote: Create a pull request for 'pseudoBranch' on GitHub by visiting:
+remote:      https://github.com/sneka-muralikrishnan/DevOpsDemo/pull/new/pseudoBranch
+remote:
+To https://github.com/sneka-muralikrishnan/DevOpsDemo.git
+ * [new branch]      pseudoBranch -> pseudoBranch
