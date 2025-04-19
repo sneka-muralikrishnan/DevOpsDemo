@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head><title>Create Profile</title></head>
+<body>
+  <h2>Create Profile</h2>
+  <form th:action="@{/submit}" th:object="${profile}" method="post">
+    Name: <input type="text" th:field="*{name}" /><br/>
+    Email: <input type="email" th:field="*{email}" /><br/>
+    Age: <input type="number" th:field="*{age}" /><br/>
+    <button type="submit">Submit</button>
+  </form>
+</body>
+</html>
